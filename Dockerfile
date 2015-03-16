@@ -1,8 +1,6 @@
-FROM ubuntu:14.04 
+FROM java:openjdk-8-jdk
 
-RUN apt-get update && apt-get install -y openjdk-7-jdk maven git
-
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
+RUN apt-get update && apt-get install -y --no-install-recommends maven git
 
 RUN git clone git://github.com/xebia/Xebium
 
